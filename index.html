@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+      <link rel="shortcut icon" href="fabicon.jpeg" type="image/x-icon">
+  </head>
+  <body>
+    <div class="lg-container-fluid bg-dark text-light p-2">
+        <h6 class=" text-center text fw-normal align-middle">Flat 20% OFF on your 1st app usage</h6>
+    </div>
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+        <div class="navbar-brand" href="#"><i class="fa-solid fa-bars fa-2x mt-4 ms-3"></i></div>
+          <div class="navbar-logo">
+           <img src="data:image/png;base64,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" alt="" width="150" height="50">
+          </div>
+          <div class="navbar-icon">
+              <i class="fa-regular fa-user fa-2x m-2 "></i>
+              <i class="fa-solid fa-magnifying-glass fa-2x m-2"></i>
+              <i class="fa-regular fa-heart fa-2x m-2"></i>
+              <i class="fa-solid fa-cart-shopping fa-2x m-2"></i>
+          </div>
+          </div>
+          </nav>
+    
+    <div class="container-fluid">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://qubekart.com/wp-content/uploads/2023/09/new3.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://www.titan.co.in/on/demandware.static/-/Sites/default/dw351f9cc6/images/slot/landing/Deskstop-680x323-Brown.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="https://rukminim1.flixcart.com/fk-p-image/720/280/cf-chitrakaar-prod/bc9602127c7d8f92c77bc58d4e86be50.jpeg?q=90" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </div>
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#virat" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#virat" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+      <div class="container mt-4 text-center">
+        <button class="btn btn-dark rounded-pill">NEW DROPS</button>
+        <button class="btn btn-light border border-dark rounded-pill m-2">MOST TRENDING</button>
+    </div>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container-fluid p-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 14rem; height: 30rem;">
+                            <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">Titan Raga Silver Dial Quartz Analog Metal Strap Watch for Women</h6>
+                              <p class="card-text">₹ 4,045.00</p>
+                              <a href="#" class="btn btn-dark">Add to cart</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 14rem;height: 30rem;">
+                        <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h6 class="card-title">Titan Raga Foliage </h6>
+                          <p class="card-text">₹.5995</p>
+                          <a href="#" class="btn btn-dark">Add to cart</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 14rem;height: 30rem;">
+                            <img src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw1e380d61/images/Titan/Catalog/2725WM01_1.jpg?sw=360&sh=360" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">Titan New </h6>
+                              <p class="card-text">Rs.3999</p>
+                              <a href="#" class="btn btn-dark">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 14rem;height: 30rem;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTckQjsLg8ADXa32Rzr-GIP6vZ4wksJSqNorA&s" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">New RoseGold Titan</h6>
+                              <p class="card-text">Rs.4999</p>
+                              <a href="#" class="btn btn-dark">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 14rem;height: 30rem;">
+                            <img src="https://sslimages.shoppersstop.com/sys-master/images/hf2/h00/31024359899166/WTT95190WM02_NoColour_alt1.jpg_2000Wx3000H" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">MOP Dial Brass Analog Watch For Women </h6>
+                              <p class="card-text">Rs.8,199</p>
+                              <a href="#" class="btn btn-dark">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container-fluid p-4">
+                <div class="row">
+                    <div class="col">
+                        <div class="card" style="width: 14rem; height: 30rem;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQDD6ohVsw_Z5zXhT0hrJxvaaASMYVGcO_YBD6hEj_fA&s" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">Swiss Watches</h6>
+                              <p class="card-text">Rs. 4,699</p>
+                              <a href="#" class="btn btn-dark">Add to cart</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 14rem;height: 30rem;">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCFOlt4rTRwaxsDixB_Z1Mvhk_D4M5MnhjZA&s" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h6 class="card-title">Raga Titan</h6>
+                          <p class="card-text">Rs.2,999</p>
+                          <a href="#" class="btn btn-dark">Add to cart</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 14rem;height: 30rem;">
+                            <img src="https://watchbrand.in/media/catalog/product/9/5/95207qd01.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">New Raga Titan</h6>
+                              <p class="card-text">Rs.10,525</p>
+                              <a href="#" class="btn btn-dark">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 14rem;height: 30rem;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC1Yal36Pi_oFnoEH7yPpvBZq5hdqUEPPvcA&s" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">New Titan</h6>
+                              <p class="card-text">Rs.2,999</p>
+                              <a href="#" class="btn btn-dark">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 14rem;height: 30rem;">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8aB7cCLoIAk4Eyfj397xK1lLWeyuWz47Z2Q&s" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h6 class="card-title">Artisanal White TShirt</h6>
+                              <p class="card-text">Rs.1,199</p>
+                              <a href="#" class="btn btn-dark">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <div class="container text-center">
+        <button class="btn btn-light border border-secondary w-25">EXPLORE ALL</button>
+    </div>
+    <div class="container pt-2 mt-4 text-center">
+        <h3>SHOP BY LOOKS <i class="fa-regular fa-eye text-warning"></i> <i class="fa-regular fa-eye text-warning"></i></h3> 
+    </div>
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col text-center text-info">
+                <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw5487e70b/images/Titan/Catalog/2606WM08_1.jpg?sw=360&sh=360" alt="">
+                <h3>FASHION</h3>
+            </div>
+            <div class="col text-center text-info">
+                <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw94aae36a/images/Titan/Catalog/2606WL02_1.jpg?sw=360&sh=360" alt="">
+                <h3>WORK WEAR</h3>
+            </div>
+            <div class="col text-center text-info">
+                <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw3d3b3d2c/images/Titan/Catalog/95140QM01_1.jpg?sw=360&sh=360" alt="">
+                <h3>METAL</h3>
+            </div>
+            <div class="col text-center text-info">
+                <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw5e858117/images/Titan/Catalog/95141QM01_1.jpg?sw=360&sh=360" alt="">
+                <h3>STRAP WATCH</h3>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-4 text-center">
+        <button class="btn btn-info border border-warning rounded-3">MEN</button>
+        <button class="btn btn-light border border-warning rounded-3 m-1">WOMEN</button>
+        <button class="btn btn-light border border-warning rounded-3 m-1">SMART WATCHES</button>
+        <button class="btn btn-light border border-warning rounded-3 m-1">PREMIUM WATECHES</button>
+        <button class="btn btn-light border border-warning rounded-3 m-1">ALL WATECHES</button>
+    </div>
+    <div id="Moto" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <div class="container-fluid p-4">
+                <div class="row">
+                    <div class="col">
+                        <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwcf9305b4/images/Titan/Catalog/90188AP03_1.jpg?sw=360&sh=360" alt=""><br>
+                        Amoled Display<br>
+                       Rs. 4,995
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwc06bc004/images/Fastrack/Catalog/38083PP09_1.jpg?sw=360&sh=360" alt=""><br>
+                        Ultra Uv Displayt<br>
+                        Rs. 4,995
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwf7cbdb2d/images/Fastrack/Catalog/38094PP01_1.jpg?sw=360&sh=360" alt=""><br>
+                        Fasttrack Invoke Pro<br>
+                      Rs. 4,995
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw0bf22148/images/Titan/Catalog/90166AP04_1.jpg?sw=360&sh=360" alt=""><br>
+                        Amoled Display<br>
+                         Rs. 12,995
+                    </div>
+                </div>
+            </div> 
+          </div>
+          <div class="carousel-item active">
+            <div class="container-fluid p-4">
+                <div class="row">
+                    <div class="col">
+                        <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw07f84ebe/images/Fastrack/Catalog/38086PP06_1.jpg?sw=360&sh=360" alt=""><br>
+                        FastTrack Reflex Power<br>
+                        Rs. 4,495 
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwad5f2573/images/Titan/Catalog/90172AP01_1.jpg?sw=360&sh=360" alt=""><br>
+                        Titan Evoke black<br>
+                        Rs. 4,999
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw47b7073f/images/Fastrack/Catalog/38094PP02_1.jpg?sw=360&sh=360" alt=""><br>
+                        Titan new smart<br>
+                        Rs.4,295
+                    </div>
+                    <div class="col">
+                        <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw93ad9d9b/images/Fastrack/Catalog/38079PP02_1.jpg?sw=360&sh=360" alt=""><br>
+                        Smart Watch with AI voice and Hydration<br>
+                        Rs. 8,999
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#dhoni" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#dhoni" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+      
+    <div class="container text-center">
+        <button class="btn btn-light border border-secondary w-25">VIEW ALL</button>
+    </div>
+    <div class="container-fluid">
+        <img class="img-fluid w-100 mt-2 pt-2" src="banner2.webp" alt="">
+    </div>
+    <div class="container mt-4 text-center">
+        <button class="btn btn-dark rounded-pill">International Brands</button>
+        
+    </div>
+    <div class="container-fluid p-4">
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw7361b230/images/Helios/Catalog/AK1980GNGB_1.jpg?sw=360&sh=360" alt=""><br>
+                Anne Klein Quartz Analog Green Dial Metal Strap Watch for Women<br>
+                Rs. 10,999 
+            </div>
+            <div class="col">
+                <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw650d4d08/images/Helios/Catalog/TH1782605_1.jpg?sw=360&sh=360" alt=""><br>
+                Tommy Hilfiger Quartz Multifunction Silver Dial Leather Strap Watch for Women<br>
+                Rs.11,495
+            </div>
+            <div class="col">
+                <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw2d0b5ece/images/Helios/Catalog/AKB3898GYST_1.jpg?sw=360&sh=360" alt=""><br>
+                Anne Klein Quartz Analog Grey Dial Stainless Steel Strap Watch for Women<br>
+                Rs.6,599
+            </div>
+            <div class="col">
+                <img class="img-fluid" src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwe7679dbf/images/Helios/Catalog/TH1782685_1.jpg?sw=360&sh=360" alt=""><br>
+                Tommy Hilfiger Quartz Analog Grey Stainless Steel Strap for Women<br>
+                Rs. 11,559
+            </div>
+        </div>
+    </div>
+    <br> 
+    
+
+    <div class="container-fluid bg-info p-4">
+        <div class="row">
+            <div class="col">
+                <u>OFFLINE STORE</u><br><br>
+                Find Stores Near Me
+            </div>
+            <div class="col">
+                <u>GET TO KNOW US</u><br><br>
+               Contact Us<br>
+               FAQ's<br>
+               Blogs<br>
+               Terms &amp; Conditions<br>
+            </div>
+            <div class="col"> 
+            <u>TRACK OR RETURN/EXCHANGE ORDER</u><br><br>
+            Track Order<br>
+            Place Return/Exchange Request<br>
+            Returns/Exchange Policy
+            </div>
+            <div class="col"> 
+            <u>CUSTOMER CARE</u><br><br>
+            Timings: 10 AM - 7 PM (Mon - Sat)<br>
+            Whatsapp : +91 7032499156<br>
+            Instagram: @Titan.co.in<br>
+            </div>
+        </div>
+    </div> 
+
+    </script>
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+  crossorigin="anonymous"
+></script>
+</html>
